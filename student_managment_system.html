@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STUDENT MANAGEMENT SYSTEM</title>
+</head>
+<body>
+    <h2> ---------------------------🧑‍🎓<u>STUDENT MANAGEMENT SYSTEM</u>----------------------</h2>
+    <hr>
+    <h3>Add Student:-</h3>
+    <form id="studentForm">
+
+        <label>ID:</label>
+        <input type="number">
+        <br><br>
+
+
+        <label>Student Name:</label>
+        <input type="text">
+
+        <br><br>
+        <form>
+        <label>Age:</label>
+        <input type="number">
+
+        <br><br>
+        <form>
+        <label>Course:</label>
+        <input type="text">
+
+        <br><br>
+        <form>
+        <label>Marks:</label>
+        <input type="number">
+
+        <br><br>
+
+        <button type="Submit">SUBMIT</button>
+    </form>
+
+    <h3>Student records:-</h3>
+    <table border="1" id="studentTable">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>COURSE</th>
+            <th>AGE</th>
+            <th>MARKS</th>
+        </tr>
+
+        <tr>
+            <td>100</td>
+            <td>NITISH KUMAR</td>
+            <td>B.TECH</td>
+            <td>18</td>
+            <td>95</td>
+        </tr>
+
+            <tr>
+            <td>101</td>
+            <td>SUJEET KUMAR</td>
+            <td>B.TECH</td>
+            <td>20</td>
+            <td>96</td>
+        </tr>
+
+
+            <tr>
+            <td>102</td>
+            <td>PANKAJ KUMAR</td>
+            <td>B.TECH</td>
+            <td>18</td>
+        </tr>
+
+            <tr>
+            <td>103</td>
+            <td>VISAL KUMAR</td>
+            <td>B.TECH</td>
+            <td>18</td>
+            <td>99</td>
+        </tr>
+
+            <tr>
+            <td>104</td>
+            <td>RAJEEV KUMAR</td>
+            <td>B.TECH</td>
+            <td>78</td>
+            <td>65</td>
+        </tr>
+
+             <tr>
+            <td>105</td>
+            <td>ADITYA KUMAR</td>
+            <td>B.TECH</td>
+            <td>18</td>
+            <td>85</td>
+        </tr>
+
+
+            <tr>
+            <td>106</td>
+            <td>KESHAV KUMAR</td>
+            <td>B.TECH</td>
+            <td>19</td>
+            <td>90</td>
+        </tr>
+
+
+                <tr>
+            <td>107</td>
+            <td>ADITYA KUMAR</td>
+            <td>B.TECH</td>
+            <td>18</td>
+            <td>95</td>
+        </tr>
+
+            <tr>
+            <td>108</td>
+            <td>RAHUL KUMAR</td>
+            <td>B.TECH</td>
+            <td>18</td>
+            <td>95</td>
+        </tr>
+
+            <tr>
+            <td>109</td>
+            <td>ROHIT KUMAR</td>
+            <td>B.TECH</td>
+            <td>20</td>
+            <td>98</td>
+        </tr>
+
+
+            <tr>
+            <td>110</td>
+            <td>RAKESH KUMAR</td>
+            <td>B.TECH</td>
+            <td>20</td>
+            <td>98</td>
+        </tr>
+        </table>
+<script>
+    const form = document.getElementById("studentForm");
+    const table = document.getElementById("studentTable");
+
+    form.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+        const course = document.getElementById("course").value;
+        const marks = document.getElementById("marks").value;
+
+        const row = table.insertRow();
+
+        const idCell = row.insertCell(0);
+        const nameCell = row.insertCell(1);
+        const courseCell = row.insertCell(2);
+        const ageCell = row.insertCell(3);
+        const marksCell = row.insertCell(4);
+
+        const id = table.rows.length + 99;
+
+        idCell.innerHTML = id;
+        nameCell.innerHTML = name;
+        courseCell.innerHTML = course;
+        ageCell.innerHTML = age;
+        marksCell.innerHTML = marks;
+
+        form.reset();
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
